@@ -10,12 +10,13 @@ export const addVideos = videos => dispatch => {
   });
 };
 
-
 // TODO: Communicate to MainWindow that the user wants
 // to start converting videos.  Also listen for feedback
 // from the MainWindow regarding the current state of
 // conversion.
-export const convertVideos = videos => dispatch => {
+export const convertVideos = () => (dispatch, getState) => {
+  const { videos } = getState();
+
   ipcRenderer.send('conversion:start', videos);
 
   ipcRenderer.on('conversion:progress', (event, { video, timemark }) => {

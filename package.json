@@ -1,13 +1,13 @@
 {
-  "name": "timer",
+  "name": "video-converter",
   "version": "1.0.0",
-  "description": "Electron timer app",
+  "description": "Electron video converter",
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server",
     "electron": "electron ."
   },
-  "author": "Rallycoding",
+  "author": "Ethan Blumenthal",
   "devDependencies": {
     "electron": "~1.6.2"
   },
